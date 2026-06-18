@@ -7,11 +7,11 @@ pid-file        = /var/run/mysqld/mysqld.pid
 socket          = /var/run/mysqld/mysqld.sock
 port            = 3306
 datadir         = /var/lib/mysql
-bind-address    = 0.0.0.0 # Open for cluster network connections [cite: 48]
+bind-address    = 0.0.0.0 # Open for cluster network connections 
 
 # Core Replication Parameters
-server-id       = 2 # Unique identifier for Slave node [cite: 47]
-relay-log       = /var/log/mysql/mysql-relay-bin.log # Process relay log pipeline [cite: 48]
+server-id       = 2 # Unique identifier for Slave node 
+relay-log       = /var/log/mysql/mysql-relay-bin.log # Process relay log pipeline 
 read_only       = 1 # Enforce read-only restriction on replica to avoid drift
 
 # Fine Tuning & Security Configurations
