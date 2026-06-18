@@ -1,0 +1,25 @@
+# 1. Append or update these lines under the [mysqld] section in /etc/mysql/mysql.conf.d/mysqld.cnf on .141
+
+[mysqld]
+# Networking & Access Control
+user            = mysql
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+port            = 3306
+datadir         = /var/lib/mysql
+bind-address    = 0.0.0.0 # Open for cluster network connections [cite: 48]
+
+# Core Replication Parameters
+server-id       = 2 # Unique identifier for Slave node [cite: 47]
+relay-log       = /var/log/mysql/mysql-relay-bin.log # Process relay log pipeline [cite: 48]
+read_only       = 1 # Enforce read-only restriction on replica to avoid drift
+
+# Fine Tuning & Security Configurations
+max_connections = 150
+key_buffer_size = 16M
+max_allowed_packet = 64M
+thread_stack    = 256K
+
+# InnoDB Engine Tuning
+innodb_buffer_pool_size = 128M
+innodb_log_file_size = 48M

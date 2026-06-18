@@ -1,0 +1,29 @@
+# 1. Append or update these lines under the [mysqld] section in /etc/mysql/mysql.conf.d/mysqld.cnf on .140
+
+[mysqld]
+# Networking & Access Control
+user            = mysql
+pid-file        = /var/run/mysqld/mysqld.pid
+socket          = /var/run/mysqld/mysqld.sock
+port            = 3306
+datadir         = /var/lib/mysql
+bind-address    = 0.0.0.0 # Open for cluster network connections [cite: 43]
+
+# Core Replication Parameters
+server-id       = 1 # Unique identifier for Master node [cite: 42]
+log_bin         = /var/log/mysql/mysql-bin.log # Enable binary streaming logs [cite: 43]
+binlog_format   = ROW
+
+# Fine Tuning & Security Configurations
+mysqlx          = OFF
+max_connections = 150
+key_buffer_size = 16M
+max_allowed_packet = 64M
+thread_stack    = 256K
+thread_cache_size = 8
+
+# InnoDB Performance defaults
+innodb_buffer_pool_size = 128M
+innodb_log_file_size = 48M
+innodb_flush_log_at_trx_commit = 1
+innodb_file_per_table = 1
