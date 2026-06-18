@@ -1,9 +1,11 @@
-# High-Availability (HA) Multi-Tier Web Infrastructure PoC
+# High-Availability (HA) Multi-Tier Web Infrastructure PoC 
+# Refer to /Verification/Full Architecture System.pdf
 
 A production-grade, highly available enterprise infrastructure platform built entirely on VMware Workstation. [cite_start]This Proof of Concept (PoC) eliminates Single Points of Failure (SPOFs) across the application processing, session management, and database layers to achieve **99.9% uptime** resilience under automated fault conditions[cite: 2, 3, 36].
 
 ## 🏗️ System Architecture
-<img width="751" height="462" alt="image" src="https://github.com/user-attachments/assets/a82d5f30-126d-44a1-ab1e-468a9f55e532" />
+<img width="1002" height="451" alt="image" src="https://github.com/user-attachments/assets/d62bd9ca-2225-48c6-8228-cd2992ae6716" />
+
 
 ### Infrastructure & Network Matrix
 [cite_start]The entire platform operates over static IPv4 network interfaces on the `192.168.192.0/24` subnet[cite: 37, 51]. [cite_start]Node communication parameters are mapped out explicitly below:
