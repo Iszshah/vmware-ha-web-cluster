@@ -7,11 +7,11 @@ pid-file        = /var/run/mysqld/mysqld.pid
 socket          = /var/run/mysqld/mysqld.sock
 port            = 3306
 datadir         = /var/lib/mysql
-bind-address    = 0.0.0.0 # Open for cluster network connections [cite: 43]
+bind-address    = 0.0.0.0 # Open for cluster network connections 
 
 # Core Replication Parameters
-server-id       = 1 # Unique identifier for Master node [cite: 42]
-log_bin         = /var/log/mysql/mysql-bin.log # Enable binary streaming logs [cite: 43]
+server-id       = 1 # Unique identifier for Master node 
+log_bin         = /var/log/mysql/mysql-bin.log # Enable binary streaming logs 
 binlog_format   = ROW
 
 # Fine Tuning & Security Configurations
